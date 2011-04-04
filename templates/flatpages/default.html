@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block headtitle %}
+{{ flatpage.title }} -
+{% endblock %}
+
+{% block breadcrumbs %} / {{ flatpage.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ flatpage.title }}</h1>	
+{{ flatpage.content }}
+{% endblock %}
