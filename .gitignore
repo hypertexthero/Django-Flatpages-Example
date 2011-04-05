@@ -1,4 +1,4 @@
 # don't put settings file in version control
 settings.py
-# don't put python running files in version control
+# don't put python compiled files in version control
 *.pyc
