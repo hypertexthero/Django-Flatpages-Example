@@ -1,5 +1,6 @@
 # don't put settings.py or shell scripts in version control
 settings.py
 init.sh
+settings-production.py
 # don't put python compiled files in version control
 *.pyc
