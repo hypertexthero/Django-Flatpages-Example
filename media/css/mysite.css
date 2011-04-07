@@ -1,0 +1,7 @@
+/* mysite.css stylesheet */
+
+/* 
+	If blue border appears on top of page, static media is working: 
+	- http://docs.djangoproject.com/en/1.3/howto/static-files/
+*/
+body {border-top:5px #6CF solid;}

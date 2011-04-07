@@ -1,9 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
 
-# Importing staticfiles_urlpatterns 
-# - http://docs.djangoproject.com/en/1.3/howto/static-files/#staticfiles-development
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -23,5 +19,11 @@ urlpatterns += patterns('django.views.generic.simple',
     # (r'^foo/(?P<id>\d+)/$', 'direct_to_template', {'template': 'foo_detail.html'}),
 )
 
-# Importing staticfiles_urlpatterns
-urlpatterns += staticfiles_urlpatterns()
+# Serving static/media files could be better with Django. Here's how to do it in the development server (and use href="{{ MEDIA_URL }}css/mysite.css" in mysite/myproject/templates/base.html). In production I believe it will be controlled by a setting in mysite/myproject/etc/nginx.conf
+# http://docs.djangoproject.com/en/dev/howto/static-files/#serving-static-files-in-development
+from django.conf import settings
+
+if settings.DEBUG :
+    urlpatterns += patterns('',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+    )
