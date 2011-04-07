@@ -4,3 +4,5 @@ init.sh
 settings-production.py
 # don't put python compiled files in version control
 *.pyc
+*.pyc
+*.socket
