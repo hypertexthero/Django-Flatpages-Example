@@ -15,7 +15,7 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('django.views.generic.simple',
-    (r'^$',             'direct_to_template', {'template': 'base.html'}),
+    (r'^$', 'direct_to_template', {'template': 'base.html'}),
     # (r'^foo/(?P<id>\d+)/$', 'direct_to_template', {'template': 'foo_detail.html'}),
 )
 

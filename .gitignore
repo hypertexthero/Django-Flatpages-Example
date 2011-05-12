@@ -1,8 +1,41 @@
-# don't put settings.py or shell scripts in version control
+# Don't put settings.py in version control
 settings.py
+settings_local.py
+settings_local_production.py
+
+
+# No shell scripts
 init.sh
-settings-production.py
-# don't put python compiled files in version control
+
+# No python compiled files in version control
 *.pyc
 *.pid
 *.socket
+
+# No files with passwords/etc
+htusers
+
+# No user-uploaded media
+# media/
+
+# No packages - better to unpack these files and commit the raw source as Git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# No logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# No OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
