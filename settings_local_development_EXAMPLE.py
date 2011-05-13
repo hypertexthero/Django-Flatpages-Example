@@ -2,9 +2,6 @@
 # Rename to settings_local.py
 # DO NOT PUT THIS FILE IN VERSION CONTROL
 
-import os
-DIRNAME = os.path.dirname(__file__)
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -33,10 +30,6 @@ DATABASES = {
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
 TIME_ZONE = 'Europe/Rome'
-
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(DIRNAME, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -68,14 +61,6 @@ STATICFILES_DIRS = (
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'random string of ascii'
-
-# TEMPLATE_DIRS = (
-#     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-#     # Always use forward slashes, even on Windows.
-#     # Don't forget to use absolute paths, not relative paths.
-#   '',
-# )
-TEMPLATE_DIRS = os.path.join(DIRNAME, 'templates')
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

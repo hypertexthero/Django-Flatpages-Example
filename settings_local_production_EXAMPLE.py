@@ -2,9 +2,6 @@
 # Upload to project folder on web server (where settings.py is found) and rename to settings_local.py
 # DO NOT PUT THIS FILE IN VERSION CONTROL
 
-import os
-DIRNAME = os.path.dirname(__file__)
-
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -48,10 +45,6 @@ USE_I18N = True
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale
 USE_L10N = True
-
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(DIRNAME, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -109,14 +102,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'myproject.urls'
-
-# TEMPLATE_DIRS = (
-#     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-#     # Always use forward slashes, even on Windows.
-#     # Don't forget to use absolute paths, not relative paths.
-#   '',
-# )
-TEMPLATE_DIRS = os.path.join(DIRNAME, 'templates')
 
 INSTALLED_APPS = (
     'django.contrib.auth',
