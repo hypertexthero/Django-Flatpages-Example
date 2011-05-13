@@ -3,7 +3,6 @@ settings.py
 settings_local.py
 settings_local_production.py
 
-
 # No shell scripts
 init.sh
 

@@ -35,22 +35,20 @@ TIME_ZONE = 'Europe/Rome'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
-
-# Absolute path to the directory static files should be collected to.
-# Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+MEDIA_URL = 'http://127.0.0.1:8000/media/'
+# For production:
+# MEDIA_URL = '/media/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = ''
+STATIC_URL = 'http://127.0.0.1:8000/static/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = ''
+# Create symbolic link to Django's admin media folder so admin interface styling and javascript is loaded (correct semantics would place admin media in the static folder, but her we are at this point in Django's development):
+# ln -s ~/django_projects/mysite/lib/python2.6/site-packages/django/contrib/admin/media/ ~/django_projects/mysite/myproject/media/admin
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (

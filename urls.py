@@ -19,11 +19,11 @@ urlpatterns += patterns('django.views.generic.simple',
     # (r'^foo/(?P<id>\d+)/$', 'direct_to_template', {'template': 'foo_detail.html'}),
 )
 
-# Serving static/media files could be better with Django. Here's how to do it in the development server (and use href="{{ MEDIA_URL }}css/mysite.css" in mysite/myproject/templates/base.html). In production I believe it will be controlled by a setting in mysite/myproject/etc/nginx.conf
+# Serving static/media files could be better with Django. Here's how to do it in the development server (and use href="{{ STATIC_URL }}css/mysite.css" in mysite/myproject/templates/base.html). In production I believe it will be controlled by a setting in mysite/myproject/etc/nginx.conf
 # http://docs.djangoproject.com/en/dev/howto/static-files/#serving-static-files-in-development
 from django.conf import settings
 
 if settings.DEBUG :
     urlpatterns += patterns('',
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+        url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
     )
