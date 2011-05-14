@@ -14,7 +14,7 @@ init.sh
 # No files with passwords/etc
 htusers
 
-# No user-uploaded media
+# No user-uploaded media or media admin files
 # media/
 
 # No packages - better to unpack these files and commit the raw source as Git has its own built in compression methods
