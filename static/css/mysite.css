@@ -10,3 +10,4 @@ p.breadcrumbs {}
 p#footer {font-size:0.9em; border-top:1px solid #eee; padding-top:1em; color:#999;}
 p#footer a {color:#999;}
 .quiet {color:#999;}
+pre {border:1px solid #ccc; padding:1em;}
