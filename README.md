@@ -3,4 +3,4 @@ I followed [Evan's tutorial on setting up Django on a Joyent shared accelerator]
 TODO: 
 
 - Implement a [Markdown markup filter in a manner that saves processing time](http://code.djangoproject.com/wiki/UsingMarkup "UsingMarkup – Django").
-- <del>Implement [Pygments syntax highlighter](http://pygments.org/ "Pygments &mdash; Python syntax highlighter") for displaying code in a manner that is easier to understand.</del>
+- Add help text to Content text area in admin: "[Markdown](http://daringfireball.net/projects/markdown/syntax "Markdown syntax documentation")" format required. Pasted code indented by 4 spaces will be made pretty by the [Pygments syntax highlighter](http://pygments.org/ "Pygments &mdash; Python syntax highlighter").
