@@ -94,12 +94,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    # enabling markup so we can have markdown. requires http://www.freewisdom.org/projects/python-markdown
+    'django.contrib.markup',
     # 'django.contrib.staticfiles',
-	'django.contrib.flatpages', # enabling flatpages app
+    'django.contrib.flatpages', # enabling flatpages app
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
+    'myproject',
 )
 
 # A sample logging configuration. The only tangible logging
