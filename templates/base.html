@@ -30,7 +30,7 @@
 
     {% block footer %}
     <p id="footer">
-        This has been <a href="http://hypertexthero.com" title="Hypertexthero.com">Simon Griffee</a>, experimenting with Django.<br />
+        This has been <a href="http://hypertexthero.com" title="Hypertexthero.com">Simon Griffee</a>, experimenting with Django {{ django_version }}.<br />
         It is currently {% now "H:i T" %} on the {% now "jS" %} of {% now "F Y" %}.
     </p>
     {% endblock %}
